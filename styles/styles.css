@@ -6,12 +6,29 @@
   list-style: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: all 400ms ease;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --primary-color: #007bff;
+  /* A vibrant blue similar to the logo's line art */
+  --secondary-color: #f2f2f2;
+  /* A light gray similar to the logo's background */
+  --text-color: #333333;
+  /* A dark gray for text readability */
+  --button-color: var(--primary-color);
+  /* Match the primary color for buttons */
+  --button-hover-color: #0062cc;
+  /* A slightly darker shade for button hover */
+  --border-color: #dddddd;
+  /* A light gray for borders */
 }
 
 :root {
@@ -23,6 +40,26 @@ body {
 
   --border-color: skyblue;
   --border-color: deepskyblue;
+
+  --primary-color: #007bff;
+  /* Deep blue from the circles */
+  --secondary-color: #212529;
+  /* Dark background color */
+  --text-color: #ffffff;
+  /* Contrasting white for readability */
+  --button-color: var(--primary-color);
+  /* Match the primary color */
+  --button-hover-color: #0062cc;
+  /* Slightly darker hover state */
+  --border-color: rgba(255, 255, 255, 0.2);
+  /* Subtle white border */
+
+  --box-shadow-offset-x: 2px;
+  --box-shadow-offset-y: 2px;
+  --box-shadow-blur: 4px;
+  --box-shadow-spread: 0px;
+  --box-shadow-color: var(--primary-color);
+  /* Adjust opacity as needed */
 }
 
 .container {
@@ -33,9 +70,17 @@ body {
 
 /********************************************** Header **********************************************/
 header {
-  padding: 1rem 0;
-  background: transparent;
   background: var(--primary-bg);
+  background: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  transition: top 0.3s;
+  backdrop-filter: blur(2px);
+  z-index: 100;
 }
 
 header .header {
@@ -47,18 +92,19 @@ header .header {
 }
 
 .logo img {
-  background: gray;
+  background: white;
   width: 5rem;
   border-radius: 50%;
 }
 
 header a {
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
   padding-bottom: 5px;
 }
+
 header .active,
 header a:hover {
   color: var(--primary-text-color);
@@ -84,12 +130,15 @@ header h1 {
 /********************************************** Hero Section **********************************************/
 .hero {
   background: var(--primary-bg);
+  background-image: url(/assets/images/bg1.png);
   color: #fff;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: left;
-  height: 500px;
+  height: 100vh;
   text-align: center;
-  padding-top: 100px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-text {
@@ -128,101 +177,150 @@ header h1 {
 .hero p {
   font-size: 24px;
   text-align: center;
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   line-height: normal;
 }
 
 .hero .tagline .btn {
   padding: 10px 20px;
-  background: darkcyan;
-  background: darkslategray;
+  background: var(--primary-color);
   color: #fff;
   border-top-right-radius: 50rem;
   border-bottom-right-radius: 50rem;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+}
+
+.tagline .btn:hover {
+  background: #128C7E;
 }
 
 /****************************************** About Section **********************************************/
-.about {
+#about {
   padding: 30px 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #fff;
-  text-align: center;
+  /* text-align: center; */
+  background-image: url(/assets/images/bg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  /* color: var(--text-color); */
 }
 
 .about h2 {
+  font-size: 40px;
+  color: var(--text-color);
   margin-bottom: 20px;
 }
 
 .about p {
   font-size: 18px;
+  color: var(--secondary-text-color);
 }
 
 .highlights {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  /* justify-content: center; */
+  /* margin-top: 30px; */
+  /* align-items: center; */
 }
 
 .highlight {
-  width: 30%;
-  background: #f4f4f4;
+  /* width: 30%; */
+  /* background: #f4f4f4; */
+  /* background: transparent; */
   padding: 20px;
   border-radius: 8px;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(20px);
+  background: #111;
 }
 
-/********************************************** Projects Section **********************************************/
-.projects {
-  padding: 30px 0;
-  background: #f4f4f4;
-  text-align: center;
+.highlight h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
 }
 
-.project-grid {
+.highlight p {
+  color: var(--secondary-text-color);
+}
+
+/********************************************** Team Section **********************************************/
+#team {
+  /* padding: 30px 0; */
+  height: 100vh;
+  background: #fff;
+  background-image: url(/assets/images/bg3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.project-item {
-  width: 30%;
+.team {
+  /* text-align: center; */
 }
 
-.project-item img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.highlight h4 {
-  font-size: 22px;
-}
-
-.projects,
-.events {
-  padding: 40px 20px;
-}
-
-.projects h3,
-.events h3 {
-  text-align: center;
+.team h2 {
+  font-size: 40px;
+  color: var(--text-color);
   margin-bottom: 20px;
-  font-size: 28px;
 }
 
-.project-grid,
-.event-list {
+.team-grid {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: left;
+  /* flex-wrap: wrap; */
+  gap: 2rem;
 }
 
-.project-card,
-.event-item {
-  background-color: white;
+.team-member {
+  padding: 0;
+  background: var(--secondary-color);
   padding: 20px;
-  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(20px);
+  width: fit-content;
   width: 30%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.team-member img {
+  width: 50%;
+  margin: 0;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.team-member p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
 }
 
 /********************************************** Footer Section **********************************************/
@@ -231,7 +329,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 footer .social-links a {
@@ -249,22 +347,53 @@ footer .social-links a {
     text-align: center;
   }
 
-  .hero h2 {
-    font-size: 28px;
+  .hero h1 {
+    font-size: 48px;
   }
 
   .hero p {
     font-size: 16px;
   }
 
-  .introduction .highlights {
+  .hero .tagline {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
   }
 
-  .project-card,
+  .hero .tagline .btn {
+    font-size: 16px;
+  }
+
+  .tagline p {
+    text-align: left;
+  }
+
+  #about {
+    padding: 5rem 0;
+    height: auto;
+    /* background-size: contain; */
+  }
+
+  .about {
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .highlights {
+    /* background: red; */
+    flex-wrap: wrap;
+  }
+
+  .project-item,
   .event-item {
     width: 45%;
+  }
+
+  .team-member {
+    width: 80%;
   }
 
   .cta-button {
@@ -295,13 +424,44 @@ footer .social-links a {
     font-size: 24px;
   }
 
+  .highlights {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .highlight h4 {
     font-size: 20px;
   }
 
-  .project-card,
-  .event-item {
-    width: 100%;
+  #team {
+    padding: 5rem 0;
+    height: auto;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    gap: 2rem;
+  }
+
+  .team-member {
+    padding: 0;
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(20px);
+    width: fit-content;
+    /* width: 30%; */
+    text-align: center;
+  }
+
+  .team-member img {
+    /* width: 50%; */
+    /* margin: 0; */
+    /* height: auto; */
+    /* border-radius: 0.5rem; */
+    /* margin-bottom: 10px; */
   }
 
   footer .social-links {

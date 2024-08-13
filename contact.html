@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <title>Contact</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header">
+      <div class="logo">
+        <img src="./assets/images/TI_logo_transparent.png" alt="Tech Inspire logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <!-- <li><a href="#projects">Projects</a></li> -->
+          <!-- <li><a href="#events">Events</a></li> -->
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!------------------------------------------------- Contact Section ------------------------------------------------->
+  <section id="contact">
+    <div class="container contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="#" method="post">
+        <!-- <label for="name">Name</label> -->
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+        <!-- <label for="email">Email</label> -->
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <!-- <label for="message">Message</label> -->
+        <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      // Prevent form from submitting if validation fails
+      if (!validateForm()) {
+        event.preventDefault(); // Stop form submission
+      }
+    });
+
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      let isValid = true;
+
+      // Check if name is empty
+      if (name === '') {
+        alert('Name is required.');
+        isValid = false;
+      }
+
+      // Check if email is empty and is in valid format
+      if (email === '' || !validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        isValid = false;
+      }
+
+      // Check if message is empty
+      if (message === '') {
+        alert('Message cannot be empty.');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+  </script>
+</body>
+
+</html>
