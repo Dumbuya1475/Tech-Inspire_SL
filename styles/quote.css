@@ -1,0 +1,52 @@
+/* Quotes Page Styles */
+.quotes {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.quotes .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quotes h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.quote-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.quote-text {
+    font-size: 24px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .quote-card {
+        padding: 15px;
+    }
+
+    .quote-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-card {
+        padding: 10px;
+    }
+
+    .quote-text {
+        font-size: 18px;
+    }
+}

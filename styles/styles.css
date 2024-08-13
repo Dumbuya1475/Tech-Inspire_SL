@@ -1,0 +1,316 @@
+/********************************************** Basic Styles **********************************************/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 400ms ease;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-bg: #222;
+  --secondary-bg: #333;
+
+  --primary-text-color: white;
+  --secondary-text-color: gray;
+
+  --border-color: skyblue;
+  --border-color: deepskyblue;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/********************************************** Header **********************************************/
+header {
+  padding: 1rem 0;
+  background: transparent;
+  background: var(--primary-bg);
+}
+
+header .header {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  background: gray;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+header a {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+header .active,
+header a:hover {
+  color: var(--primary-text-color);
+  border-bottom: 1px solid lightslategray;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+}
+
+header ul li {
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header h1 {
+  float: left;
+  margin: 0;
+}
+
+/********************************************** Hero Section **********************************************/
+.hero {
+  background: var(--primary-bg);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  height: 500px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-text {
+  line-height: 0.8;
+  text-align: justify;
+}
+
+.hero h1 {
+  color: var(--primary-text-color);
+  margin: 0;
+  font-size: 5rem;
+  font-family: sans-serif;
+}
+
+.hero h1:nth-child(1) {
+  text-align: left;
+}
+
+.hero h1:nth-child(3) {
+  text-align: left;
+}
+
+.hero h1:nth-child(5) {
+  text-align: right;
+}
+
+.hero .tagline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero p {
+  font-size: 24px;
+  text-align: center;
+  color: var(--secondary-text-color);
+  line-height: normal;
+}
+
+.hero .tagline .btn {
+  padding: 10px 20px;
+  background: darkcyan;
+  background: darkslategray;
+  color: #fff;
+  border-top-right-radius: 50rem;
+  border-bottom-right-radius: 50rem;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/****************************************** About Section **********************************************/
+.about {
+  padding: 30px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.highlight {
+  width: 30%;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/********************************************** Projects Section **********************************************/
+.projects {
+  padding: 30px 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-item {
+  width: 30%;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.highlight h4 {
+  font-size: 22px;
+}
+
+.projects,
+.events {
+  padding: 40px 20px;
+}
+
+.projects h3,
+.events h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.project-grid,
+.event-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-card,
+.event-item {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/********************************************** Footer Section **********************************************/
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer .social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/********************************************** Media Queries for Responsiveness **********************************************/
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .introduction .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card,
+  .event-item {
+    width: 45%;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .introduction h3 {
+    font-size: 24px;
+  }
+
+  .highlight h4 {
+    font-size: 20px;
+  }
+
+  .project-card,
+  .event-item {
+    width: 100%;
+  }
+
+  footer .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .social-links a {
+    margin: 5px 0;
+  }
+}
