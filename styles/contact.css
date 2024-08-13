@@ -16,7 +16,7 @@
 /* Contact Section */
 #contact {
   background:var(--primary-color);
-  background-image: url(../assets/images/bg4.png);
+  background-image: url('../assets/images/bg4.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
