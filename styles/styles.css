@@ -1,11 +1,11 @@
-/********************************************** Basic Styles **********************************************/
+/*============================ Basic Styles ============================*/
 * {
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: all 400ms ease;
+  transition: all 100ms ease;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -16,19 +16,15 @@ body {
   padding: 0;
 }
 
-:root {
-  --primary-color: #007bff;
-  /* A vibrant blue similar to the logo's line art */
-  --secondary-color: #f2f2f2;
-  /* A light gray similar to the logo's background */
-  --text-color: #333333;
-  /* A dark gray for text readability */
-  --button-color: var(--primary-color);
-  /* Match the primary color for buttons */
-  --button-hover-color: #0062cc;
-  /* A slightly darker shade for button hover */
-  --border-color: #dddddd;
-  /* A light gray for borders */
+.container .heading h2 {
+  font-size: 40px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.container .heading p {
+  font-size: 18px;
+  color: var(--secondary-text-color);
 }
 
 :root {
@@ -42,33 +38,30 @@ body {
   --border-color: deepskyblue;
 
   --primary-color: #007bff;
-  /* Deep blue from the circles */
   --secondary-color: #212529;
-  /* Dark background color */
   --text-color: #ffffff;
-  /* Contrasting white for readability */
+
   --button-color: var(--primary-color);
-  /* Match the primary color */
   --button-hover-color: #0062cc;
-  /* Slightly darker hover state */
   --border-color: rgba(255, 255, 255, 0.2);
-  /* Subtle white border */
 
   --box-shadow-offset-x: 2px;
   --box-shadow-offset-y: 2px;
   --box-shadow-blur: 4px;
   --box-shadow-spread: 0px;
   --box-shadow-color: var(--primary-color);
-  /* Adjust opacity as needed */
+
+  /* --transition: 200ms ease; */
 }
 
 .container {
-  width: 80%;
+  /* width: 80%; */
+  padding: 0 8%;
   margin: auto;
   overflow: hidden;
 }
 
-/********************************************** Header **********************************************/
+/* ============================ Header ============================ */
 header {
   background: var(--primary-bg);
   background: transparent;
@@ -93,7 +86,7 @@ header .header {
 
 .logo img {
   background: white;
-  width: 5rem;
+  width: 4rem;
   border-radius: 50%;
 }
 
@@ -127,7 +120,7 @@ header h1 {
   margin: 0;
 }
 
-/********************************************** Hero Section **********************************************/
+/* ============================ Hero Section ============================ */
 .hero {
   background: var(--primary-bg);
   background-image: url('../assets/images/bg1.png');
@@ -199,7 +192,7 @@ header h1 {
   background: #128C7E;
 }
 
-/****************************************** About Section **********************************************/
+/* ============================ About Section ============================ */
 #about {
   padding: 30px 0;
   height: 100vh;
@@ -207,48 +200,42 @@ header h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  /* text-align: center; */
-  background-image: url('../assets/images/bg2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: var(--primary-bg);
+  background: #131416;
 }
 
 .about {
+  backdrop-filter: blur(2px);
   display: flex;
   flex-direction: row;
-  /* color: var(--text-color); */
-}
-
-.about h2 {
-  font-size: 40px;
-  color: var(--text-color);
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 18px;
-  color: var(--secondary-text-color);
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 2rem 0;
 }
 
 .highlights {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  /* justify-content: center; */
-  /* margin-top: 30px; */
-  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: 1rem;
 }
 
 .highlight {
-  /* width: 30%; */
-  /* background: #f4f4f4; */
-  /* background: transparent; */
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  backdrop-filter: blur(20px);
-  background: #111;
+  border-radius: 0.5rem;
+  background: var(--color-bg1);
+  padding: 1rem;
+  background: transparent;
+  transition: background all 3s ease;
+  /* box-shadow: 0 0 0.3rem lightblue; */
+  border: 2px solid var(--button-color);
+  background: var(--color-bg1);
+}
+
+.highlight:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 3);
 }
 
 .highlight h3 {
@@ -258,15 +245,25 @@ header h1 {
 
 .highlight p {
   color: var(--secondary-text-color);
+  color: darkgray;
 }
 
-/********************************************** Team Section **********************************************/
-#team {
-  /* padding: 30px 0; */
-  height: 100vh;
+
+/* ======================== Achievements Section styles ====================== */
+#achievements {
+  padding: 30px 0;
+  height: 100%;
   background: #fff;
-  background-image: url('../assets/images/bg3.png');
+  height: 100vh;
+  background-image: url('../assets/images/bg1_copy.png');
+  background: #131416;
   background-repeat: no-repeat;
+  /* height: 100%; */
+  /* background-image: url('../assets/images/bg1.png'); */
+  /* background-image: url('../assets/images/bg2.png'); */
+  /* background: transparent; */
+  /* backdrop-filter: blur(3px); */
+  /* background-attachment: fixed; */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -274,43 +271,101 @@ header h1 {
   align-items: center;
 }
 
-.team h2 {
-  font-size: 40px;
-  color: var(--text-color);
-  margin-bottom: 20px;
+.achievements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column-reverse;
+  gap: 3rem;
+}
+
+#achievements .highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#achievements .highlight {
+  display: flex;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0rem;
+  box-shadow: none;
+  transition: background all 3s ease;
+  border: 2px solid var(--button-color);
+}
+
+#achievements .highlight:hover {
+  transform: scale(1.07);
+}
+
+#achievements .highlight .icon {
+  margin-bottom: 1rem;
+}
+
+#achievements .highlight h3 {
+  font-size: 2.5rem;
+}
+
+#achievements .highlight p {
+  font-size: large;
+}
+
+#achievements .highlight i {
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 50%;
+  color: white;
+  color: var(--color-bg1);
+  border: 2px solid var(--border-color);
+  background-color: var(--button-color);
+}
+
+/* ============================ Team Section ============================ */
+#team {
+  padding: 30px 0;
+  height: 100%;
+  /* height: 100vh; */
+  background: #131416;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .team-grid {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
   justify-content: left;
-  /* flex-wrap: wrap; */
   gap: 2rem;
+  width: 100%;
+  padding: 1rem 0;
 }
 
 .team-member {
-  padding: 0;
   background: var(--secondary-color);
-  padding: 20px;
+  padding: 1rem;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
-  backdrop-filter: blur(20px);
-  width: fit-content;
-  width: 30%;
   text-align: center;
+  transition: background all 3s ease;
+  border: 2px solid var(--button-color);
+  background: var(--color-bg1);
+  backdrop-filter: blur(50px);
+}
+
+.team-member:hover {
+  transform: scale(1.05);
 }
 
 .team-member img {
-  width: 50%;
-  margin: 0;
-  height: auto;
+  width: 100%;
+  width: 90%;
   border-radius: 0.5rem;
   margin-bottom: 10px;
 }
 
 .team-member h3 {
-  font-size: 24px;
+  font-size: 18px;
   color: var(--text-color);
 }
 
@@ -319,22 +374,156 @@ header h1 {
   color: var(--secondary-text-color);
 }
 
-/********************************************** Footer Section **********************************************/
+.team-member {
+  width: 100%;
+}
+
+.team-member:hover {
+  background: transparent;
+}
+
+.team-member-image img {
+  filter: saturate(0);
+}
+
+.team-member-image:hover img {
+  filter: saturate(1);
+}
+
+.team-member-info+ {
+  text-align: center;
+  margin-top: 1.4rem;
+}
+
+.team-member-info p {
+  color: var(--color-light);
+}
+
+.team-member-socials {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: -2rem 0 2rem rgba(0, 0, 0, 3);
+  background: var(--color-primary);
+  backdrop-filter: blur(3px);
+}
+
+.team-member-socials {
+  border: 2px solid var(--button-color);
+  border-right: none;
+}
+
+.team-member-socials a {
+  color: white;
+  color: var(--primary-bg);
+  padding: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.team-member-socials i {
+  color: var(--button-color);
+  color: gray;
+}
+
+.team-member-socials a:hover i,
+.team-member-socials a:hover,
+.team-member-socials i:hover {
+  color: white;
+  transform: scale(1);
+  background: var(--button-color);
+}
+
+.team-member-socials #first {
+  border-top-left-radius: 1rem;
+}
+
+.team-member-socials #last {
+  border-bottom-left-radius: 1rem;
+}
+
+i:nth-child(2) {
+  background: yellow;
+}
+
+/* ============================ Footer Section ============================ */
 footer {
   background-color: #333;
-  color: white;
   text-align: center;
   padding: 20px;
-  /* margin-top: 20px; */
+  background: var(--secondary-bg);
+  background: #222;
+}
+
+footer h4 {
+  font-size: large;
+  color: white;
+}
+
+footer a {
+  color: white;
+  color: gray;
 }
 
 footer .social-links a {
-  color: blue;
+  color: red;
   text-decoration: none;
   margin: 0 10px;
 }
 
-/********************************************** Media Queries for Responsiveness **********************************************/
+footer {
+  padding-top: 5rem;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+
+.footer-container>div h4 {
+  margin-bottom: 1.2rem;
+}
+
+.footer-1 p {
+  margin: 0 0 2rem;
+}
+
+footer small {
+  color: white;
+}
+
+footer ul li {
+  margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.2rem 0;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--button-color);
+}
+
+/*============================ Media Queries for Responsiveness =*===========================/
 
 /* For tablets and smaller devices */
 @media (max-width: 768px) {
@@ -367,20 +556,35 @@ footer .social-links a {
     text-align: left;
   }
 
+  /* About section [media - tablet]*/
   #about {
-    padding: 5rem 0;
-    height: auto;
-    /* background-size: contain; */
+    height: 100%;
   }
 
   .about {
-    gap: 2rem;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .highlights {
-    /* background: red; */
     flex-wrap: wrap;
+  }
+
+  /* Achievements section [media - tablet] */
+  #achievements {
+    height: 100%;
+  }
+
+  .achievements {
+    grid-template-columns: 1fr;
+  }
+
+  /* Team section [media - tablet] */
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
   }
 
   .project-item,
@@ -389,7 +593,7 @@ footer .social-links a {
   }
 
   .team-member {
-    width: 80%;
+    width: 100%;
   }
 
   .cta-button {
@@ -416,40 +620,43 @@ footer .social-links a {
     font-size: 14px;
   }
 
+  .about .highlights {
+    padding: 0;
+  }
+
   .introduction h3 {
     font-size: 24px;
+
   }
 
   .highlights {
     grid-template-columns: repeat(1, 1fr);
+
   }
 
   .highlight h4 {
     font-size: 20px;
   }
 
+  #achievements .highlights {
+    display: grid;
+    padding: 0;
+  }
+
+  #achievements .highlight {
+    gap: 0;
+  }
+
+  #achievements .highlights i {
+    font-size: 2rem;
+  }
+
   #team {
     padding: 5rem 0;
-    height: auto;
   }
 
   .team-grid {
-    flex-direction: column;
-    justify-content: center;
-    /* flex-wrap: wrap; */
-    gap: 2rem;
-  }
-
-  .team-member {
-    padding: 0;
-    background: var(--secondary-color);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    backdrop-filter: blur(20px);
-    width: fit-content;
-    /* width: 30%; */
-    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   footer .social-links {
