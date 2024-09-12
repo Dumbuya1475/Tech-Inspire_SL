@@ -7,6 +7,8 @@
   <title>Tech Inspire</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/about.css">
+
+  <!-- Box icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -16,17 +18,20 @@
   <header id="header">
     <div class="container header">
       <div class="logo">
-        <img src="./assets/images/TI_logo_transparent.png" alt="Tech Inspire logo">
+        <!-- <img src="./assets/images/TI_logo_transparent.png" alt="Tech Inspire logo"> -->
+        <img src="./assets/images/TI_logo.webp" alt="Tech Inspire logo">
       </div>
       <nav>
-        <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <!-- <li><a href="#projects">Projects</a></li> -->
-          <!-- <li><a href="#events">Events</a></li> -->
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html">Our Team</a></li>
+          <li><a href="events.html">Events</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="hamburger">
+          <i class="bx bx-menu"></i>
+        </div>
       </nav>
     </div>
   </header>
@@ -51,8 +56,19 @@
     <div class="container about">
       <div class="heading">
         <h2>About Us</h2>
-        <p>At Tech Inspire, we are passionate about inspiring and educating students about the ever-evolving world of
-          technology and its career opportunities.</p>
+        <p>
+          At Tech Inspire, our mission is to empower students by introducing them to the limitless possibilities in the
+          world of
+          technology. We are a community dedicated to educating and inspiring the next generation of tech professionals.
+          Through
+          valuable resources, mentorship, and collaboration, we help students explore the exciting fields of
+          programming,
+          robotics, and beyond. Whether you're a beginner or someone seeking to deepen your tech skills, Tech Inspire is
+          here to
+          guide and support you on your journey. Join us as we shape the future of technology together.
+        </p>
+        <br><br>
+        <a href="more_about.html" class="btn">Learn More</a>
       </div>
       <div class="highlights">
         <div class="highlight">
@@ -76,8 +92,15 @@
     <div class="container achievements">
       <div class="heading">
         <h2>Achievements</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi quo pariatur saepe enim magnam? In fuga ex,
-          maxime nisi minus dolor accusantium odit vitae, iusto dolores ipsa sequi repellendus sint.</p>
+        <p>Since our inception, Tech Inspire has grown into a vibrant community with 10 passionate members, including 2
+          students
+          eager to dive into the tech world. We are proud to have made an impact by reaching out to two different
+          locations,
+          spreading our message and offering support to students seeking to unlock their potential in technology. As we
+          continue
+          to grow, we remain committed to inspiring more students and expanding our reach to new places.</p>
+        <br><br>
+        <a href="more_achievement.html" class="btn">Learn More</a>
       </div>
       <div class="highlights">
         <div class="highlight">
@@ -120,7 +143,7 @@
       </div>
       <div class="team-grid">
         <div class="team-member">
-          <img src="assets/images/me3.png" alt="Team Member 1">
+          <img src="assets/images/me3.png" alt="Ahmed I Sankoh image">
           <h3>Ahmed I Sankoh</h3>
           <p>Founder & CEO</p>
           <p>Ahmed I is passionate about technology and innovation, leading our team with a vision for the future.</p>
@@ -141,7 +164,7 @@
         </div>
 
         <div class="team-member">
-          <img src="assets/images/me1.png" alt="Team Member 2">
+          <img src="assets/images/super.png" alt="Mohamed S Dumbuya image">
           <h3>Mohamed S Dumbuya</h3>
           <p>Co-Founder & CTO</p>
           <p>Mohamed Super brings a wealth of technical expertise and oversees our tech initiatives and projects.</p>
@@ -166,86 +189,77 @@
           <p>Chief Operations Officer</p>
           <p>Emily ensures our operations run smoothly, facilitating team collaboration and project execution.</p>
         </div> -->
-        <div class="team-member">
-          <div class="team-member-image">
-            <img src="./assets/images/me1.png" alt="">
-          </div>
-          <div class="team-member-info">
-            <h4>Mohamed Super Dumbuya</h4>
-            <p>Software Engineer</p>
-          </div>
-          <div class="team-member-socials">
-            <a href="" id="first">
-              <i class="bx bxl-linkedin"></i>
-            </a>
-            <a href="#">
-              <i class="bx bxl-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="bx bxl-facebook"></i>
-            </a>
-            <a href="#" id="last">
-              <i class="bx bxl-instagram  bx-tada-hover"></i>
-            </a>
-          </div>
-        </div>
       </div>
+    </div>
   </section>
 
   <!-- ============================ Footer ============================ -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-1">
-        <a href="index.html" class="footer-logo">
-          <h4>Mi Classroom</h4>
-        </a>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ut.
-        </p>
-      </div>
-
-      <div class="footer-2">
-        <h4>Goto</h4>
-        <ul class="permalinks">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-3">
-        <h4>Privacy</h4>
-        <ul class="privacy">
-          <li><a href="index.html">Privacy Policy</a></li>
-          <li><a href="about.html">Terms and Conditions</a></li>
-          <li><a href="courses.html">Refund Policy</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-4">
-        <h4>Contact Us</h4>
-        <div class="">
-          <p>+232 74 52 35 00</p>
-          <p>mcr@gmail.com</p>
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fab fa-slack"></i>
+          <span class="logo_name">Tech Inspire SL</span>
         </div>
-
-        <ul class="footer-socials">
+        <div class="media-icons">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <!-- <a href="#"><i class="bx bxl-twitter"></i></a> -->
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <img src="assets/images/TI_logo.webp" width="180" alt="">
+          <!-- <li class="link_name"></li> -->
+          <p style="color: white;">Inspiring the Next Generation of Tech Innovators</p>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Tech Inspire SL</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Get started</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Contact Us</li>
           <li>
-            <a href="https://www.linkedin.com/company/104579914/admin/dashboard/"><i class="bx bxl-facebook"></i></a>
+            <p><i class="bx bx-map"></i> Lungi </p>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/104579914/admin/dashboard/"><i class="bx bxl-twitter"></i></a>
+            <p><i class="bx bx-phone"></i> +232 74522500</p>
+            <p><i class="bx bx-phone"></i> +232 74522500</p>
+          </li>
+          <li>
+            <p><i class="bx bxl-gmail"></i> info@techinspire.com</p>
           </li>
         </ul>
+        <!-- <ul class="box">
+          <li class="link_name">Courses</li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Photoshop</a></li>
+        </ul> -->
+        <ul class="box input-box">
+          <li class="link_name">Subscribe</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
       </div>
-
     </div>
-    <div class="footer-copyright">
-      <small>&copy; 2024 Tech Inspire. All rights reserved.</small>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2021 <a href="#">TechInspire.SL.</a>All rights reserved</span>
+        <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
     </div>
   </footer>
-  <!-- ************************END OF TESTIMONIAL ************************* -->
+  <!-- ************************ TESTIMONIAL Section ************************* -->
 
   <script src="scripts/script.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
