@@ -8,14 +8,14 @@
 }
 
 .container {
-  /* width: 80%; */
+  width: 80%;
   margin: auto;
   overflow: hidden;
 }
 
 /* Contact Section */
 #contact {
-  background:var(--primary-color);
+  background: var(--primary-color);
   background-image: url('../assets/images/bg4.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -50,9 +50,10 @@
 }
 
 #contact input::placeholder,
-#contact textarea::placeholder{
+#contact textarea::placeholder {
   color: white;
 }
+
 #contact input,
 #contact textarea {
   width: 100%;
@@ -102,6 +103,10 @@
 }
 
 @media (max-width: 480px) {
+  #contact form {
+    width: 100%;
+  }
+
   #contact h2 {
     font-size: 24px;
   }
