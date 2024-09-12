@@ -16,3 +16,16 @@ window.addEventListener('scroll', () => {
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 });
+
+
+// Function to handle nav panel
+const close_hamburger = document.querySelector('.close-hamburger');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+close_hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
