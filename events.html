@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles/events.css">
   <link rel="stylesheet" href="styles/styles.css">
 
-  <!-- Font awesome -->
   <!-- Box icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -17,20 +16,14 @@
       height: 20rem;
     }
 
-    /* .events {
-      padding-top: 5rem;
-    } */
-
     /* Add this to your CSS (styles.css or events.css) */
     button.selected {
       background-color: green;
-      /* Or any color you prefer */
       color: white;
     }
 
     button {
       background-color: #ddd;
-      /* Default color for buttons */
       color: black;
       padding: 10px;
       border: none;
@@ -60,7 +53,6 @@
     }
 
     .event-list {
-      /* background-color: pink; */
       padding: 1rem;
     }
   </style>
@@ -71,7 +63,6 @@
   <header id="header">
     <div class="container header">
       <div class="logo">
-        <!-- <img src="./assets/images/TI_logo_transparent.png" alt="Tech Inspire logo"> -->
         <img src="./assets/images/TI_logo.webp" alt="Tech Inspire logo">
       </div>
       <nav>
@@ -79,9 +70,9 @@
           <div class="nav-header">
             <div class="nav-logo">
               <h1>Tech Inspire SL</h1>
-              <div class="close-hamburger">
+              <button class="close-hamburger">
                 <i class="bx bx-x"></i>
-              </div>
+              </button>
             </div>
           </div>
           <li><a href="index.html" class="active">Home</a></li>
@@ -90,9 +81,9 @@
           <li><a href="events.html">Events</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
+        <button class="hamburger">
           <i class="bx bx-menu"></i>
-        </div>
+        </button>
       </nav>
     </div>
   </header>
@@ -150,19 +141,15 @@
       </div>
     </div>
   </section>
-
-
   <!-- ============================ Footer ============================ -->
   <footer>
     <div class="content">
       <div class="top">
         <div class="logo-details">
-          <i class="fab fa-slack"></i>
           <span class="logo_name">Tech Inspire SL</span>
         </div>
         <div class="media-icons">
           <a href="#"><i class="bx bxl-facebook"></i></a>
-          <!-- <a href="#"><i class="bx bxl-twitter"></i></a> -->
           <a href="#"><i class="bx bxl-instagram"></i></a>
           <a href="#"><i class="bx bxl-linkedin"></i></a>
           <a href="#"><i class="bx bxl-youtube"></i></a>
@@ -171,7 +158,6 @@
       <div class="link-boxes">
         <ul class="box">
           <img src="assets/images/TI_logo.webp" width="180" alt="">
-          <!-- <li class="link_name"></li> -->
           <p style="color: white;">Inspiring the Next Generation of Tech Innovators</p>
         </ul>
         <ul class="box">
@@ -181,20 +167,26 @@
           <li><a href="#">About us</a></li>
           <li><a href="#">Get started</a></li>
         </ul>
+        <ul class="box">
+          <li class="link_name">How to reach us</li>
+          <li>
+            <p><i class="bx bx-map"></i> Lungi </p>
+          </li>
+          <li>
+            <p><i class="bx bx-phone"></i> +232 74522500</p>
+            <p><i class="bx bx-phone"></i> +232 74522500</p>
+          </li>
+          <li>
+            <p><i class="bx bxl-gmail"></i> info@techinspire.com</p>
+          </li>
+        </ul>
         <!-- <ul class="box">
-            <li class="link_name">Account</li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">My account</a></li>
-            <li><a href="#">Prefrences</a></li>
-            <li><a href="#">Purchase</a></li>
-          </ul> -->
-        <!-- <ul class="box">
-            <li class="link_name">Courses</li>
-            <li><a href="#">HTML & CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">Photography</a></li>
-            <li><a href="#">Photoshop</a></li>
-          </ul> -->
+          <li class="link_name">Courses</li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Photoshop</a></li>
+        </ul> -->
         <ul class="box input-box">
           <li class="link_name">Subscribe</li>
           <li><input type="text" placeholder="Enter your email"></li>
@@ -206,12 +198,14 @@
       <div class="bottom_text">
         <span class="copyright_text">Copyright © 2021 <a href="#">TechInspire.SL.</a>All rights reserved</span>
         <span class="policy_terms">
+          <a href="#">Support Us</a>
           <a href="#">Privacy policy</a>
           <a href="#">Terms & condition</a>
         </span>
       </div>
     </div>
   </footer>
+  <!-- ************************ TESTIMONIAL Section ************************* -->
 
   <script src="scripts/script.js"></script>
   <script>
@@ -252,7 +246,6 @@
 
     // Apply saved choice when the page loads
     window.addEventListener("load", applySavedChoice);
-
   </script>
 
 
