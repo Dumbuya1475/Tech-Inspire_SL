@@ -95,17 +95,27 @@
   align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
   /* Adjust layout for larger screens */
   .event-list {
-    grid-template-columns: repeat(1, 1fr);
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .event {
+    width: 100%;
   }
 }
 
+/* For mobile phones */
 @media (max-width: 480px) {
-    .event-list {
-      grid-template-columns: repeat(1, 1fr);
-      padding: 1rem 0;
-    }
+  .event-list {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
   }
+
+  .event:hover {
+    transform: none;
+  }
+}
