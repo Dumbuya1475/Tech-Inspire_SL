@@ -1,4 +1,6 @@
-
+body{
+  background: var(--primary-bg);
+}
 .container {
   width: 100%;
   margin: auto;
@@ -12,9 +14,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  /* padding: 40px 20px; */
-  /* margin: 20px 0; */
-  /* border-radius: 8px; */
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -23,7 +22,6 @@
 }
 
 #contact h2 {
-  /* text-align: center; */
   color: var(--text-color);
   margin-bottom: 20px;
   font-size: 36px;
