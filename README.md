@@ -1,1 +1,1 @@
-# Tech-Inspire
+# Tech Inspire SL
