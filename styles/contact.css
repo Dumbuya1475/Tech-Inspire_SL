@@ -1,6 +1,7 @@
-body{
+body {
   background: var(--primary-bg);
 }
+
 .container {
   width: 100%;
   margin: auto;
@@ -9,8 +10,8 @@ body{
 
 /* Contact Section */
 #contact {
-  background: var(--primary-color);
-  background-image: url('../assets/images/bg4.png');
+  background: var(--primary-bg);
+  /* background-image: url('../assets/images/bg4.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -22,7 +23,7 @@ body{
 }
 
 #contact h2 {
-  color: var(--text-color);
+  color: var(--primary-text-color);
   margin-bottom: 20px;
   font-size: 36px;
 }
@@ -36,12 +37,12 @@ body{
 
 #contact label {
   font-size: 18px;
-  color: var(--text-color);
+  color: var(--primary-text-color);
 }
 
 #contact input::placeholder,
 #contact textarea::placeholder {
-  color: white;
+  color: var(--secondary-text-color);
 }
 
 #contact input,
@@ -49,10 +50,10 @@ body{
   width: 100%;
   backdrop-filter: blur(20px);
   padding: 10px;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--button-color);
   border-radius: 4px;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--primary-text-color);
   background: transparent;
 }
 
@@ -93,6 +94,10 @@ body{
 }
 
 @media (max-width: 480px) {
+  .contact {
+    margin: 5rem;
+  }
+
   #contact form {
     width: 100%;
   }
