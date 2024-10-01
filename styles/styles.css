@@ -314,7 +314,7 @@ Hero Section
 
 /* Dark theme background image */
 body.dark-theme .hero {
-  background-image: url('/assets/images/bg1.png');
+  background-image: url('../assets/images/bg1.png');
 }
 
 /* hero text */
