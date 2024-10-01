@@ -1,0 +1,49 @@
+    /* FAQ Section Styles */
+    #faq {
+      padding: 100px 0;
+      background-color: var(--primary-bg);
+      /* Light background color */
+    }
+
+    .faq .heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+      background-color: var(--extra-bg);
+      /* White background for each item */
+      border: 1px solid var(--border-color);
+      /* Light border */
+      border-radius: 5px;
+      /* Slightly rounded corners */
+      margin: 10px auto;
+      /* Space between items */
+      padding: 20px;
+      /* Inner padding */
+      max-width: 600px;
+      /* Maximum width */
+      transition: box-shadow 0.3s;
+      /* Smooth shadow effect */
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      /* Shadow on hover */
+    }
+
+    .faq-item h3 {
+      font-size: 18px;
+      /* Heading size */
+      color: var(--primary-text-color);
+      /* Dark text color */
+      margin-bottom: 10px;
+      /* Space below heading */
+    }
+
+    .faq-item p {
+      font-size: 16px;
+      /* Paragraph size */
+      color: var(--secondary-text-color);
+      /* Gray text color */
+    }

@@ -1,5 +1,6 @@
-/*============================ Basic Styles ============================*/
-
+/*============================ 
+Basic Styles 
+============================*/
 * {
   padding: 0;
   margin: 0;
@@ -9,51 +10,10 @@
   transition: all 100ms ease;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: var(--primary-bg);
-}
-
-.container .heading h2 {
-  font-size: 40px;
-  color: var(--text-color);
-  margin-bottom: 20px;
-}
-
-.container .heading p {
-  font-size: 18px;
-  color: var(--secondary-text-color);
-}
-
-:root {
-  --primary-bg: #212529;
-  --primary-bg: #131416;
-  ;
-  --secondary-bg: #212529;
-
-  --primary-text-color: white;
-  --secondary-text-color: gray;
-
-  --border-color: var(--button-color);
-
-  --text-color: #ffffff;
-
-  --button-color: #0062cc;
-  --button-hover-color: #007bff;
-
-  --box-shadow-offset-x: 2px;
-  --box-shadow-offset-y: 2px;
-  --box-shadow-blur: 4px;
-  --box-shadow-spread: 0px;
-  --box-shadow-color: var(--primary-color);
-
-  --transition: 200ms ease;
-}
-
+/* global style */
 .btn {
   background: var(--button-color);
   padding: 1rem 2rem;
@@ -72,93 +32,82 @@ body {
   overflow: hidden;
 }
 
-
-/* ============================ Nav panel ============================ */
-/* Navigation Links */
-nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
+.container .heading h2 {
+  font-size: 40px;
+  color: var(--primary-text-color);
+  margin-bottom: 20px;
 }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
+.container .heading p {
+  font-size: 18px;
+  color: var(--secondary-text-color);
 }
 
-nav ul li a:hover {
-  color: var(--button-color);
+/* Light Theme */
+:root {
+  --primary-bg: #fff;
+  --secondary-bg: #e9ecef;
+
+  --hero-text-color: #000;
+  --primary-text-color: #000;
+  --secondary-text-color: #495057;
+  --extra-bg: var(--secondary-bg);
+
+
+  --button-color: #007bff;
+  --button-hover-color: #0056b3;
+
+  --border-color: var(--button-color);
+
+  --box-shadow-offset-x: 2px;
+  --box-shadow-offset-y: 2px;
+  --box-shadow-blur: 4px;
+  --box-shadow-spread: 0px;
+  --box-shadow-color: rgba(0, 0, 0, 0.2);
+
+  --transition: 200ms ease;
 }
 
-/* Hamburger Icon */
-.close-hamburger,
-.hamburger {
-  display: none;
-  cursor: pointer;
+/* Dark Theme */
+body.dark-theme {
+  --primary-bg: #131416;
+
+  --hero-text-color: #fff;
+  --primary-text-color: #fff;
+  --secondary-text-color: gray;
+  --extra-bg: #343a40;
+
+  --button-color: #0062cc;
+  --button-hover-color: #0056b3;
+
+  /* --border-color: #212529; */
+  --border-color: var(--button-color);
+
+  --box-shadow-offset-x: 2px;
+  --box-shadow-offset-y: 2px;
+  --box-shadow-blur: 4px;
+  --box-shadow-spread: 0px;
+  --box-shadow-color: rgba(0, 0, 0, 0.8);
 }
 
-.close-hamburger,
-.hamburger i {
-  font-size: 2rem;
+/* Apply theme variables */
+body {
+  background-color: var(--primary-bg);
   color: var(--text-color);
-  background: var(--button-color);
-  border-radius: 0.2rem;
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth transition */
 }
 
-/* .close-hamburger, */
-.hamburger i:hover {
-  background: (var(--button-hover-color));
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--primary-bg);
 }
 
-.nav-logo {
-  display: none;
-}
-
-/* Responsive Design: Hide Nav Links on Small Screens */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: var(--primary-bg);
-    backdrop-filter: blur(200px);
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-  }
-
-  nav ul.show {
-    transition: all 0.5s ease;
-    display: flex;
-  }
-
-  .nav-header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background: var(--button-color);
-    padding: 1rem;
-  }
-
-  .nav-header .nav-logo {
-    display: block;
-  }
-
-  .close-hamburger {
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-    /* position: absolute; */
-    /* top: 1rem; */
-    /* right: 1rem; */
-    /* z-index: 100; */
-  }
-}
-
-/* ============================ Header ============================ */
+/* ============================ 
+Header 
+============================ */
 header {
   background: var(--primary-bg);
   background: transparent;
@@ -166,69 +115,193 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  padding: 10px;
-  /* width: 100%; */
-  transition: top 0.3s;
-  backdrop-filter: blur(2px);
-  z-index: 100;
-}
-
-header .header {
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 10px 8%;
   align-items: center;
+  transition: top 0.3s;
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.nav-header {
-  display: block;
-}
-
+/* nav logo */
 .logo img {
   background: white;
   width: 4rem;
   border-radius: 50%;
 }
 
-header a {
-  color: var(--primary-text-color);
+/* Nav styling */
+nav {
+  position: relative;
+  transition: max-height 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.nav-links {
+  transform-origin: top;
+  transition: max-height 0.5s ease-out, transform 0.5s ease-out;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-links li {
+  padding: 15px;
+  text-align: center;
+}
+
+.nav-links li a {
   text-decoration: none;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 16px;
   padding-bottom: 5px;
 }
 
-header .active,
-header a:hover {
-  color: var(--primary-text-color);
-  border-bottom: 1px solid lightslategray;
+.nav-links li a:hover {
+  color: #007bff;
 }
 
-header ul {
-  padding: 0;
+.header-container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .active,
+header a:hover {
+  border-bottom: 1px solid var(--button-color);
+}
+
+/* Navigation Links */
+/* nav ul {
+  display: flex;
+  gap: 1.5rem;
   list-style: none;
 }
 
-header ul li {
-  float: left;
-  display: inline;
-  padding: 0 20px 0 20px;
+nav ul li a {
+  color: red;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
 }
 
-header h1 {
-  float: left;
-  margin: 0;
+nav ul li:hover a::after {
+  width: 100%;
+  transition: var(--transition);
 }
 
-header button{
-  background: transparent;
+nav ul li a::after {
+  content: '';
+  width: 50%;
+  height: 1px;
+  padding: 1px;
+  background: var(--button-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  text-decoration: none;
+  font-size: 1rem;
 }
-/* ============================ Hero Section ============================ */
-.hero {
-  background: var(--primary-bg);
-  background-image: url('../assets/images/bg1.png');
+
+nav ul li a:hover {
+  color: var(--button-color);
+} */
+
+/* Nav button Icon */
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger i {
+  /* font-size: 2rem; */
+  color: var(--text-color);
+  background: var(--button-color);
+  border-radius: 0.2rem;
+}
+
+.hamburger i:hover {
+  background: (var(--button-hover-color));
+}
+
+.nav-btn {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* theme btn style */
+.hamburger,
+#theme-toggle {
+  background: var(--button-color);
+  border: none;
+  padding: 10px;
   color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Navigation for large screens (desktop) */
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+}
+
+nav ul li:hover a::after {
+  width: 100%;
+  transition: 0.3s;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 50%;
+  height: 1px;
+  padding: 1px;
+  background: var(--button-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: var(--button-color);
+}
+
+.hamburger {
+  /* visibility: hidden; */
+}
+
+/* ============================
+Hero Section
+============================ */
+.hero {
+  background-color: #ccc;
+  background-image: url('../assets/images/light_bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -236,15 +309,22 @@ header button{
   justify-content: center;
   display: flex;
   flex-direction: column;
+  border-bottom: 0.1rem solid var(--border-color);
 }
 
+/* Dark theme background image */
+body.dark-theme .hero {
+  background-image: url('/assets/images/bg1.png');
+}
+
+/* hero text */
 .hero-text {
   line-height: 0.8;
   text-align: justify;
 }
 
 .hero h1 {
-  color: var(--primary-text-color);
+  color: var(--hero-text-color);
   margin: 0;
   font-size: 5rem;
   font-family: sans-serif;
@@ -293,11 +373,9 @@ header button{
   transition: background-color 0.3s ease;
 }
 
-.tagline .btn:hover {
-  background: var(--button-hover-color);
-}
-
-/* ============================ About Section ============================ */
+/* ============================ 
+About Section 
+============================ */
 #about {
   padding: 5rem 0;
   height: auto;
@@ -328,34 +406,31 @@ header button{
 
 .highlight {
   border-radius: 0.5rem;
-  background: var(--color-bg1);
   padding: 1rem;
   background: transparent;
   transition: background all 3s ease;
   /* box-shadow: 0 0 0.3rem rgb(91, 214, 255); */
   border: 2px solid var(--border-color);
-  background: var(--color-bg1);
 }
 
 .highlight:hover {
   transform: scale(1.07);
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 3);
-
-  border: 2px solid var(--button-color);
+  border: 2px solid var(--border-color);
 }
 
 .highlight h3 {
-  color: var(--text-color);
+  color: var(--primary-text-color);
   margin-bottom: 0.5rem;
 }
 
 .highlight p {
   color: var(--secondary-text-color);
-  color: darkgray;
+  /* color: darkgray; */
 }
 
-
-/* ======================== Achievements Section styles ====================== */
+/* ========================
+Achievements Section styles
+====================== */
 #achievements {
   padding: 5rem 0;
   height: auto;
@@ -371,7 +446,6 @@ header button{
 .achievements {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  flex-direction: column-reverse;
   gap: 3rem;
 }
 
@@ -393,6 +467,7 @@ header button{
 
 #achievements .highlight:hover {
   transform: scale(1.07);
+  border: 2px solid var(--border-color);
 }
 
 #achievements .highlight .icon {
@@ -421,11 +496,13 @@ header button{
   background-color: var(--button-color);
 }
 
-/* ============================ Team Section ============================ */
+/* ============================ 
+Team Section 
+============================ */
 #team {
   padding: 30px 0;
   height: auto;
-  background: #131416;
+  background: var(--primary-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -434,7 +511,7 @@ header button{
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-around;
   justify-content: left;
   gap: 2rem;
@@ -448,24 +525,29 @@ header button{
   text-align: center;
   transition: background all 3s ease;
   border: 2px solid var(--border-color);
-  background: var(--color-bg1);
+  background: var(--primary-bg);
   backdrop-filter: blur(50px);
+  position: relative;
+  overflow: hidden;
 }
 
 .team-member:hover {
   transform: scale(1.05);
+  border: 2px solid var(--border-color);
 }
 
 .team-member img {
   width: 100%;
-  width: 85%;
+  /* width: 85%; */
   border-radius: 50%;
+  border-radius: 2%;
+  background: var(--extra-bg);
   margin-bottom: 10px;
 }
 
 .team-member h3 {
   font-size: 18px;
-  color: var(--text-color);
+  color: var(--primary-text-color);
 }
 
 .team-member p {
@@ -489,45 +571,44 @@ header button{
   filter: saturate(1);
 }
 
-.team-member-info+ {
+.team-member-info {
   text-align: center;
-  margin-top: 1.4rem;
+  margin-top: 1.1rem;
 }
 
 .team-member-info p {
   color: var(--color-light);
 }
 
+/* team social profile */
 .team-member-socials {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -100%;
-  right: 0;
+  margin-top: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.5rem;
-  border-radius: 1rem 0 0 1rem;
-  box-shadow: -2rem 0 2rem rgba(0, 0, 0, 3);
-  background: var(--color-primary);
-  backdrop-filter: blur(3px);
+  justify-content: center;
+  border-radius: 0.1rem;
+  box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.3);
+  background: var(--primary-bg);
+  backdrop-filter: blur(30px);
 }
 
+
 .team-member-socials {
-  border: 2px solid var(--button-color);
-  border-right: none;
+  border: 2px solid var(--border-color);
 }
 
 .team-member-socials a {
   color: white;
   color: var(--primary-bg);
-  padding: 0.5rem;
+  padding: 0.1rem 0.5rem;
   font-size: 1.7rem;
 }
 
 .team-member-socials i {
   color: var(--button-color);
   color: gray;
+  font-size: 20px;
 }
 
 .team-member-socials a:hover i,
@@ -538,21 +619,11 @@ header button{
   background: var(--button-color);
 }
 
-.team-member-socials #first {
-  border-top-left-radius: 1rem;
-}
-
-.team-member-socials #last {
-  border-bottom-left-radius: 1rem;
-}
-
-i:nth-child(2) {
-  background: yellow;
-}
-
-/* ============================ Footer Section ============================ */
+/* ============================
+Footer Section 
+============================ */
 footer {
-  background: var(--secondary-bg);
+  background: var(--extra-bg);
   width: 100%;
 }
 
@@ -577,10 +648,12 @@ footer .content .top {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 2rem;
 }
 
 .content .top .logo-details {
-  color: #fff;
+  color: var(--primary-text-color);
   font-size: 30px;
 }
 
@@ -595,7 +668,7 @@ footer .content .top {
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
-  color: #fff;
+  color: var(--primary-text-color);
   font-size: 17px;
   text-decoration: none;
   transition: all 0.4s ease;
@@ -657,7 +730,7 @@ footer .content .link-boxes .box {
 }
 
 .content .link-boxes .box .link_name {
-  color: #fff;
+  color: var(--primary-text-color);
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 10px;
@@ -671,7 +744,7 @@ footer .content .link-boxes .box {
   bottom: -2px;
   height: 2px;
   width: 35px;
-  background: #fff;
+  background: var(--border-color);
 }
 
 .content .link-boxes .box li {
@@ -681,8 +754,8 @@ footer .content .link-boxes .box {
 
 .content .link-boxes .box li p,
 .content .link-boxes .box li a {
-  color: #fff;
-  font-size: 14px;
+  color: var(--primary-text-color);
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none;
   opacity: 0.8;
@@ -702,7 +775,7 @@ footer .content .link-boxes .box {
   height: 40px;
   width: calc(100% + 55px);
   outline: none;
-  border: 2px solid #AFAFB6;
+  border: 2px solid var(--border-color);
   background: var(--primary-bg);
   border-radius: 4px;
   padding: 0 15px;
@@ -713,12 +786,13 @@ footer .content .link-boxes .box {
 
 .link-boxes .input-box input::placeholder {
   color: #AFAFB6;
+  color: var(--secondary-text-color);
   font-size: 16px;
 }
 
 .link-boxes .input-box input[type="button"] {
   background: var(--button-color);
-  color: var(--text-color);
+  color: var(--primary-text-color);
   border: none;
   font-size: 18px;
   font-weight: 500;
@@ -749,7 +823,7 @@ footer .bottom-details .bottom_text {
 .bottom-details .bottom_text a {
   font-size: 14px;
   font-weight: 300;
-  color: #fff;
+  color: var(--primary-text-color);
   opacity: 0.8;
   text-decoration: none;
 }
@@ -763,13 +837,114 @@ footer .bottom-details .bottom_text {
   margin-right: 10px;
 }
 
+#logo-text {
+  display: none;
+  visibility: hidden;
+  color: var(--primary-text-color);
+}
+
+/* =========================
+MEDIA
+============================ */
+/* Responsive Design: Hide Nav Links on Small Screens [Tablet] */
+@media (max-width: 768px) {
+
+  /* Header styling */
+  #header {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo-img {
+    display: none;
+    visibility: hidden;
+  }
+
+  #logo-text {
+    display: block;
+    visibility: visible;
+  }
+
+
+  .mini-nav-links .nav-logo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-btn {
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  nav ul.nav-open {
+    display: flex;
+    /* max-height: 300px; */
+    transition: max-height 0.3s ease-in-out;
+    padding-bottom: 1rem;
+  }
+
+  #theme-toggle,
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+    /* padding: 2%; */
+    background: var(--button-color);
+    padding: 2px;
+    width: 3rem;
+    border-radius: 5px;
+  }
+
+
+  .nav-links {
+    background: var(--primary-bg);
+    position: fixed;
+    top: 5rem;
+    gap: 0.2rem;
+    /* gap: 0rem; */
+    height: fit-content;
+    align-items: first baseline;
+    padding: 0 1rem;
+  }
+
+
+  .nav-links li {
+    text-align: left;
+    padding: 10px;
+    /* border-bottom: 1px solid var(--border-color); */
+    border-left: 1px solid var(--border-color);
+    width: 100%;
+  }
+
+  .nav-links li:hover {
+    background: var(--extra-bg);
+  }
+
+}
+
 /*============================ Media Queries for Responsiveness =*===========================/
 
 /* For tablets and smaller devices */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    text-align: center;
+    /* flex-direction: column; */
+    /* text-align: center; */
   }
 
   .hero h1 {
@@ -854,7 +1029,6 @@ footer .bottom-details .bottom_text {
     line-height: 35px;
   }
 
-
   footer .content .link-boxes .box {
     width: calc(100% / 3 - 10px);
     display: grid;
@@ -881,25 +1055,29 @@ footer .bottom-details .bottom_text {
 
 /* For mobile phones */
 @media (max-width: 480px) {
-  header {
-    width: auto;
+  .container {
+    padding: 1rem;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  #logo-text {
+    font-size: x-large;
   }
 
-  .hero h2 {
-    font-size: 24px;
+  #about,
+  #achievements,
+  #achievements.achievements-more {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
-  .hero p {
-    font-size: 14px;
+  #achievements.achievements-more {
+    padding-top: 0;
+    padding-bottom: 5rem;
   }
 
-  .cta-button {
-    padding: 6px 12px;
-    font-size: 14px;
+  section#team {
+    padding-top: 3rem;
   }
 
   .about .highlights {
@@ -908,7 +1086,10 @@ footer .bottom-details .bottom_text {
 
   .introduction h3 {
     font-size: 24px;
+  }
 
+  .highlight:hover {
+    transform: none;
   }
 
   .highlights {

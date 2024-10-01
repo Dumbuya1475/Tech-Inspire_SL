@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tech Inspire SL: Inspiring and educating students about technology careers in Sierra Leone.">
-<meta name="keywords" content="Tech, Education, Sierra Leone, Technology Careers, Programming, Robotics">
-<meta name="author" content="Tech Inspire SL">
-<title>Tech Inspire SL - Empowering Future Innovators</title>
+  <meta name="description"
+    content="Tech Inspire SL: Inspiring and educating students about technology careers in Sierra Leone.">
+  <meta name="keywords" content="Tech, Education, Sierra Leone, Technology Careers, Programming, Robotics">
+  <meta name="author" content="Tech Inspire SL">
+  <title>Tech Inspire SL - Empowering Future Innovators</title>
 
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/about.css">
@@ -16,75 +17,54 @@
   <!-- Box icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  <style>
-    /* FAQ Section Styles */
-#faq {
-  padding: 50px 0;
-  background-color: #f9f9f9; /* Light background color */
-}
-
-.faq .heading {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.faq-item {
-  background-color: #ffffff; /* White background for each item */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 5px; /* Slightly rounded corners */
-  margin: 10px auto; /* Space between items */
-  padding: 20px; /* Inner padding */
-  max-width: 600px; /* Maximum width */
-  transition: box-shadow 0.3s; /* Smooth shadow effect */
-}
-
-.faq-item:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow on hover */
-}
-
-.faq-item h3 {
-  font-size: 18px; /* Heading size */
-  color: #333; /* Dark text color */
-  margin-bottom: 10px; /* Space below heading */
-}
-
-.faq-item p {
-  font-size: 16px; /* Paragraph size */
-  color: #555; /* Gray text color */
-}
-
-  </style>
+  <!-- animation scroll  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- ================================== Header ================================== -->
   <header id="header">
-    <div class="container header">
+    <div class="header-container">
       <div class="logo">
-        <img src="./assets/images/TI_logo.webp" alt="Tech Inspire logo">
+        <img class="logo-img" src="./assets/images/TI_logo.webp" alt="Tech Inspire logo">
+        <h1 id="logo-text">Tech Inspire SL</h1>
       </div>
       <nav>
         <ul class="nav-links">
-          <div class="nav-header">
-            <div class="nav-logo">
-              <h1>Tech Inspire SL</h1>
-              <button class="close-hamburger">
-                <i class="bx bx-x"></i>
-              </button>
-            </div>
-          </div>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#team">Our Team</a></li>
           <li><a href="events.html">Events</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <!-- <li><a href="news.html">News</a></li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
+      </nav>
+      <nav class="nav-btn">
+        <button id="theme-toggle"></button>
         <button class="hamburger">
           <i class="bx bx-menu"></i>
         </button>
       </nav>
     </div>
   </header>
+
+  <!-- <header id="header">
+    <div class="logo">
+      <img src="./assets/images/TI_logo.webp" alt="Tech Inspire logo" width="100">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header> -->
 
   <!-- ================================== Hero Section ================================== -->
   <section id="home" class="hero">
@@ -107,13 +87,15 @@
       <div class="heading">
         <h2>About Us</h2>
         <p>
-          At Tech Inspire SL, our mission is to empower students by introducing them to the limitless possibilities in the
+          At Tech Inspire SL, our mission is to empower students by introducing them to the limitless possibilities in
+          the
           world of
           technology. We are a community dedicated to educating and inspiring the next generation of tech professionals.
           Through
           valuable resources, mentorship, and collaboration, we help students explore the exciting fields of
           programming,
-          robotics, and beyond. Whether you're a beginner or someone seeking to deepen your tech skills, Tech Inspire SL is
+          robotics, and beyond. Whether you're a beginner or someone seeking to deepen your tech skills, Tech Inspire SL
+          is
           here to
           guide and support you on your journey. Join us as we shape the future of technology together.
         </p>
@@ -121,15 +103,15 @@
         <a href="more_about.html" class="btn">Learn More</a>
       </div>
       <div class="highlights">
-        <div class="highlight">
+        <div class="highlight" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
           <h3>Acquire New Skills</h3>
           <p>Explore a broad range of resources designed to enhance your tech skills.</p>
         </div>
-        <div class="highlight">
+        <div class="highlight" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
           <h3>Collaborate on Real Projects</h3>
           <p>Engage in hands-on projects that help build your portfolio and practical experience.</p>
         </div>
-        <div class="highlight">
+        <div class="highlight" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
           <h3>Network with Peers</h3>
           <p>Become part of a vibrant community of tech enthusiasts and professionals.</p>
         </div>
@@ -142,7 +124,8 @@
     <div class="container achievements">
       <div class="heading">
         <h2>Achievements</h2>
-        <p>Since our inception, Tech Inspire SL has grown into a vibrant community with 10+ passionate members, including 2
+        <p>Since our inception, Tech Inspire SL has grown into a vibrant community with 10+ passionate members,
+          including 2
           students
           eager to dive into the tech world. We are proud to have made an impact by reaching out to two different
           locations,
@@ -153,28 +136,28 @@
         <a href="more_achievement.html" class="btn">Learn More</a>
       </div>
       <div class="highlights">
-        <div class="highlight">
+        <div class="highlight" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
           <div class="icon">
             <i class="bx bxs-book"></i>
           </div>
           <h3>10+</h3>
           <p>Members</p>
         </div>
-        <div class="highlight">
+        <div class="highlight" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
           <div class="icon">
             <i class="bx bxs-map"></i>
           </div>
           <h3>1+</h3>
           <p>Places</p>
         </div>
-        <div class="highlight">
+        <div class="highlight" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
           <div class="icon">
             <i class="bx bxs-group"></i>
           </div>
           <h3>2+</h3>
           <p>Students</p>
         </div>
-        <div class="highlight">
+        <div class="highlight" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
           <div class="icon">
             <i class="bx bxs-school"></i>
           </div>
@@ -192,11 +175,12 @@
         <h2>Our Team</h2>
       </div>
       <div class="team-grid">
-        <div class="team-member">
+        <div class="team-member" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <img src="assets/images/me3.png" alt="Ahmed I Sankoh image">
           <h3>Ahmed I Sankoh</h3>
-          <p>Founder & CEO</p>
-          <p>Ahmed I is passionate about technology and innovation, leading our team with a vision for the future.</p>
+          <!-- <p>Founder & CEO</p> -->
+          <p>Computer Science - major</p>
+          <!-- <p>Ahmed I is passionate about technology and innovation, leading our team with a vision for the future.</p> -->
           <div class="team-member-socials">
             <a href="" id="first">
               <i class="bx bxl-linkedin"></i>
@@ -213,11 +197,12 @@
           </div>
         </div>
 
-        <div class="team-member">
+        <div class="team-member" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
           <img src="assets/images/super.png" alt="Mohamed S Dumbuya image">
           <h3>Mohamed S Dumbuya</h3>
-          <p>Co-Founder & CTO</p>
-          <p>Mohamed Super brings a wealth of technical expertise and oversees our tech initiatives and projects.</p>
+          <!-- <p>Co-Founder & CTO</p> -->
+          <p>Software Engineering - major</p>
+          <!-- <p>Mohamed Super brings a wealth of technical expertise and oversees our tech initiatives and projects.</p> -->
           <div class="team-member-socials">
             <a href="" id="first">
               <i class="bx bxl-linkedin"></i>
@@ -233,6 +218,29 @@
             </a>
           </div>
         </div>
+
+        <div class="team-member" data-aos="fade-right" data-aos-offset="420" data-aos-easing="ease-in-sine">
+          <img src="assets/members_img/WhatsApp_Image_2024-09-27_at_18.53.25_d0abc96f-removebg-preview.png" alt="Mohamed S Dumbuya image">
+          <h3>Mazio</h3>
+          <!-- <p>Co-Founder & CTO</p> -->
+          <p>Computer Science - major</p>
+          <!-- <p>Mohamed Super brings a wealth of technical expertise and oversees our tech initiatives and projects.</p> -->
+          <div class="team-member-socials">
+            <a href="" id="first">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a href="#" id="last">
+              <i class="bx bxl-instagram  bx-tada-hover"></i>
+            </a>
+          </div>
+        </div>
+
         <!-- <div class="team-member">
           <img src="assets/images/me1.png" alt="Team Member 3">
           <h3>Zainab M Kamara</h3>
@@ -242,32 +250,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ================================== FAQ Section ================================== -->
-  <section id="faq">
-    <div class="container faq">
-      <div class="heading">
-        <h2>Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-item">
-        <h3>What services do you offer?</h3>
-        <p>We offer mentorship, resources, and hands-on projects to help students explore technology careers.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How can I join Tech Inspire SL?</h3>
-        <p>You can join by signing up through our website or contacting us via our social media channels.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Are there any fees to join?</h3>
-        <p>Membership is free, and we offer various resources to support your learning journey.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How can I contact you for more information?</h3>
-        <p>You can reach us through the contact form on our website or via our email: info@techinspire.com.</p>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ============================ Footer ============================ -->
   <footer>
@@ -335,10 +317,9 @@
   </footer>
   <!-- ************************ TESTIMONIAL Section ************************* -->
 
-  <script src="scripts/script.js"></script>
 
-  <!-- swiper JS script for testimonial section -->
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+  </script>
   <script>
     var swiper = new swiper(".mySwiper", {
       sliderPreView: 3,
@@ -349,8 +330,16 @@
       },
     })
   </script>
-
   <script src="scripts/script.js"></script>
+
+  <!-- swiper JS script for testimonial section -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="scripts/script.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
