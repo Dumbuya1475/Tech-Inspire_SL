@@ -1,0 +1,283 @@
+main {}
+
+.container {
+  margin-top: 8rem;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h1 {
+  color: var(--primary-text-color);
+}
+
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+}
+
+/* University Card */
+.university-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 2rem;
+  /* padding: 20px; */
+}
+
+.university-card {
+  background-color: var(--card-bg);
+  /* border: 2px solid var(--border-color); */
+  /* padding: 20px; */
+  border-radius: 0.5rem;
+  width: 100%;
+  box-shadow: var(--card-box-shadow-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.university-card:hover {
+  background-color: var(--card-hover-effect-bg);
+  box-shadow: var(--card-hover-effect-shadow);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+}
+
+.university-logo img {
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: var(--secondary-text-color);
+  background-color: #333;
+  /* display: none; */
+  padding: 1rem;
+}
+
+.uni-card-text {
+  margin: 1rem;
+}
+
+.university-card h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: var(--primary-text-color);
+}
+
+.university-card p {
+  margin: 10px 0;
+  color: var(--secondary-text-color);
+  color: var(--card-text-color);
+}
+
+.university-card i {
+  padding: 0;
+  margin: 0;
+  font-size: large;
+  color: white;
+}
+
+.webpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.webpage,
+.university-card a {
+  padding: 10px;
+  display: inline-block;
+  background-color: var(--button-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.webpage a {
+  padding: 0px;
+}
+
+.university-card a:hover {
+  background-color: #0056b3;
+}
+
+.university-card li {
+  color: var(--secondary-text-color);
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-bottom: 10px;
+}
+
+
+/* ===================================
+Course Card
+====================================== */
+/* Button to switch course/universities btn style */
+#toggleButton {
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-top: 1rem;
+}
+
+.university,
+.courses {
+  display: none;
+  /* display: block; */
+}
+
+.active {
+  display: block;
+}
+
+.course-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.course-card {
+  background: var(--card-bg);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.course-card:hover {
+  background-color: var(--card-hover-effect-bg);
+  box-shadow: var(--card-hover-effect-shadow);
+  transform: translateY(-8px) scale(1.02);
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9); */
+}
+
+.course-card img {
+  /* width: 30rem; */
+  width: 100%;
+}
+
+.course-text-content h2 {
+  color: var(--primary-text-color);
+}
+
+.course-card p {
+  color: var(--card-text-color);
+}
+
+.course-text-content a {
+  font-weight: bold;
+  color: var(--primary-text-color);
+}
+
+.search-bar {
+  margin-bottom: 1rem;
+}
+
+/* course search bar */
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 16px;
+}
+
+/* =============================
+course image slideshow style
+============================= */
+#slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .container .heading h1 {
+    font-size: 1.9rem;
+    padding: 0;
+  }
+
+  .container .heading {
+    padding: 0;
+    /* background: red; */
+  }
+
+  .filter-section {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .filter-section input,
+  .filter-section select {
+    width: 100%;
+  }
+
+  .university-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .course-card {
+    padding: 0.5rem;
+    display: grid;
+  }
+
+  .course-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  .container .heading h1{
+    font-size: 20px;
+  }
+
+  .university-list {
+    display: grid;
+    /* grid-template-columns: repeat(1, 1fr); */
+    justify-content: space-between;
+    gap: 2rem;
+    /* padding: 20px; */
+  }
+
+  /* course section */
+  .course-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

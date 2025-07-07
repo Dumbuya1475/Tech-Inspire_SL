@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Setup and Command Line Basics</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 2rem;
+      background-color: #fff;
+      margin: 1rem auto;
+      max-width: 800px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    #signup-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    #signup-form input,
+    #signup-form button {
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #signup-message {
+      color: green;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Tech Inspire SL - Learn GitHub and Command Line</h1>
+    <nav>
+      <ul>
+        <li><a href="#signup">Sign Up</a></li>
+        <li><a href="#github-setup">GitHub Setup</a></li>
+        <li><a href="#command-line">Command Line Basics</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="signup">
+    <h2>Sign Up to Access Tutorials</h2>
+    <form id="signup-form">
+      <input type="text" id="user_name" placeholder="Enter your name" required>
+      <input type="email" id="user_email" placeholder="Enter your email" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="signup-message"></p>
+  </section>
+
+  <section id="github-setup">
+    <h2>How to Set Up GitHub</h2>
+    <ol>
+      <li>Create a GitHub account at <a href="https://github.com" target="_blank">https://github.com</a></li>
+      <li>Click on "Sign Up" and follow the steps.</li>
+      <li>Verify your email address to activate your account.</li>
+      <li>Create your first repository to store your code.</li>
+      <li>Download and install <a href="https://git-scm.com/" target="_blank">Git</a> on your computer.</li>
+      <li>Open a terminal and set your username and email:
+        <pre><code>
+git config --global user.name "YourName"
+git config --global user.email "youremail@example.com"
+        </code></pre>
+      </li>
+    </ol>
+  </section>
+
+  <section id="command-line">
+    <h2>Basic Command Line Commands</h2>
+    <ul>
+      <li><code>cd</code> - Change directory</li>
+      <li><code>ls</code> - List files and folders</li>
+      <li><code>mkdir</code> - Create a new directory</li>
+      <li><code>git clone [URL]</code> - Clone a GitHub repository</li>
+      <li><code>git add .</code> - Stage all changes</li>
+      <li><code>git commit -m "Your message"</code> - Commit changes with a message</li>
+      <li><code>git push</code> - Push your changes to GitHub</li <li><code>git pull</code> - Fetch and merge changes
+      from the remote repository</li>
+    </ul>
+  </section>
+
+  <footer style="text-align: center; padding: 1rem; background-color: #007BFF; color: white;">
+    <p>&copy; 2024 Tech Inspire SL. All rights reserved.</p>
+  </footer>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script> -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    (function () {
+      emailjs.init("zY-eNkbjeBXq6ilNO"); // Replace with your EmailJS user ID
+    })();
+
+    document.getElementById('signup-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const userName = document.getElementById('user_name').value;
+      const userEmail = document.getElementById('user_email').value;
+
+      const templateParams = {
+        name: userName,
+        email: userEmail
+      };
+
+      emailjs.send('service_i8sbzvq', 'template_ni9ee2s', templateParams)
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          document.getElementById('signup-message').textContent = "Sign up successful! Please check your email.";
+          document.getElementById('signup-form').reset();
+        }, function (error) {
+          console.log('FAILED...', error);
+          document.getElementById('signup-message').textContent = "Failed to sign up. Please try again.";
+        });
+    });
+  </script>
+</body>
+
+</html>

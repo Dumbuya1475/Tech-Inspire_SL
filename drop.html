@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Navigation Bar</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      position: relative;
+      background-color: #333;
+      color: white;
+      text-align: center;
+            transition: all 2s ease;
+
+    }
+
+    #toggleButton {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .nav-content {
+      display: none;
+      /* Hidden by default */
+      flex-direction: column;
+      background-color: #444;
+      transition: all 2s ease;
+      position: absolute;
+      top: 40px;
+      /* Adjust according to your button height */
+      width: 100%;
+    }
+
+    .nav-content a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-align: left;
+      display: block;
+    }
+
+    .nav-content a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <button id="toggleButton">☰ Menu</button>
+    <div id="navContent" class="nav-content">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('toggleButton').addEventListener('click', function () {
+      const navContent = document.getElementById('navContent');
+      if (navContent.style.display === 'flex') {
+        navContent.style.display = 'none';
+      } else {
+        navContent.style.display = 'flex';
+      }
+    });
+
+  </script>
+</body>
+
+</html>

@@ -13,4 +13,16 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://dumbuya1475.github.io/Tech-Inspire_SL/faq</loc>
+    <lastmod>2024-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dumbuya1475.github.io/Tech-Inspire_SL/contact</loc>
+    <lastmod>2024-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

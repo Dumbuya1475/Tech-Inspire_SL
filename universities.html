@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Universities & Tech Courses | Tech Inspire SL</title>
+
+  <link rel="icon" href="./assets/images/TI_logo.webp">
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Explore the best universities offering tech courses in Sierra Leone. Find programs like Software Engineering, Computer Science, and Information Systems.">
+  <meta name="keywords"
+    content="universities in Sierra Leone, tech courses, software engineering, computer science, information systems, private universities, government universities">
+  <meta name="author" content="Tech Inspire SL">
+
+  <!-- name="keywords" content="university, courses, education, learning, academic programs, degree, study"> -->
+  <!-- <meta name="author" content="Your Organization Name"> -->
+
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="Explore Universities & Tech Courses | Tech Inspire SL">
+  <meta property="og:description"
+    content="Find the best universities offering tech programs in Sierra Leone, including Software Engineering, Computer Science, and more.">
+  <meta property="og:url" content="https://dumbuya1475.github.io/Tech-Inspire_SL/universities.html">
+  <meta property="og:image" content="https://dumbuya1475.github.io/Tech-Inspire_SL/assets/images/TI_logo.webp">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://dumbuya1475.github.io/Tech-Inspire_SL/universities.html">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/uni_courses.css">
+
+  <!-- Box icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-container">
+      <div class="logo">
+        <img class="logo-img" src="./assets/images/TI_logo.webp" alt="Tech Inspire SL logo" />
+        <h1 id="logo-text">Tech Inspire SL</h1>
+      </div>
+      <nav>
+        <ul class="nav-links ">
+          <div class="dropdown">
+            <li><a href="index.html" class="dropdown active">Home</a></li>
+            <div class="dropdown-content">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="index.html#achievements">Achievements</a></li>
+              <li><a href="index.html#team">Our Team</a></li>
+            </div>
+          </div>
+          <li><a href="universities.html">UniGuide</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-btn">
+        <button id="theme-toggle"></button>
+        <button class="hamburger">
+          <i class="bx bx-menu"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="heading">
+      <h1>Explore Universities & Tech Courses in Sierra Leone</h1>
+      <p>Find the best universities offering tech programs and more information to guide your academic journey.</p>
+      <button id="toggleButton" class="btn">Show Courses</button>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <section class="filter-section" aria-label="Filter Universities by Location, Course, and Type">
+      <!-- Search Input -->
+      <input type="text" id="search-input" placeholder="Search universities or courses..."
+        aria-label="Search universities or courses">
+
+      <!-- Location Filters -->
+      <select id="location-filter" aria-labelledby="location-filter">
+        <option value="">Filter by Location</option>
+        <option value="freetown">Freetown</option>
+        <option value="bo">Bo</option>
+        <option value="magburaka">Magburaka</option>
+        <option value="makeni">Makeni</option>
+        <option value="kenema">Kenema</option>
+        <option value="mile-91">Mile 91</option>
+      </select>
+
+      <!-- Courses Filters -->
+      <select id="course-filter" aria-labelledby="course-filter">
+        <option value="">Filter by Course</option>
+        <option value="software engineering">Software Engineering</option>
+        <option value="computer science">Computer Science</option>
+        <option value="information systems">Information Systems</option>
+        <option value="business information technology">Business Information Technology</option>
+      </select>
+
+      <!-- Type Filters -->
+      <select id="type-filter" aria-labelledby="type-filter">
+        <option value="">Filter by Type</option>
+        <option value="government">Government</option>
+        <option value="private">Private</option>
+      </select>
+    </section>
+
+    <!-- University Listing Section -->
+    <section id="content" class="university active">
+      <div class="university-list" aria-label="List of Universities">
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/linko.png" alt="Njala University logo">
+          </div>
+          <div class="uni-card-text">
+            <h2>Limkokwing University (Sierra Leone Campus)</h2>
+            <p><strong>Location:</strong> Freetown</p>
+            <p><strong>Type:</strong> Private</p>
+            <ul>
+              <p><strong>Tech Courses:</strong></p>
+              <li>Software Engineering</li>
+              <li>Computer Science</li>
+              <li>Information Systems</li>
+            </ul>
+            <div class="uniCard-action-btn">
+              <a href="Limkokwing.html">Learn More</a>
+              <div class="webpage">
+                <i class="bx bx-globe"></i>
+                <a href="www.con">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/Central-logo.png" alt="Njala University logo">
+          </div>
+          <div class="uni-card-text">
+            <h2>Central University</h2>
+            <p><strong>Location:</strong> Mile-91</p>
+            <p><strong>Type:</strong> Private</p>
+            <ul>
+              <p><strong>Tech Courses:</strong></p>
+              <li>Cyber Security</li>
+              <li>Computer Science</li>
+              <li>Information Systems</li>
+              <li>Business Information Technology</li>
+            </ul>
+            <div class="uniCard-action-btn">
+              <a href="Central.html">Learn More</a>
+              <div class="webpage">
+                <i class="bx bx-globe"></i>
+                <a href="www.con">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/njala_logo.png" alt="Njala University logo">
+          </div>
+          <div class="uni-card-text">
+            <h2>Njala University</h2>
+            <p><strong>Location:</strong> Freetown</p>
+            <p><strong>Type:</strong> Government</p>
+            <ul>
+              <p><strong>Tech Courses:</strong></p>
+              <li>Software Engineering</li>
+              <li>Computer Science</li>
+              <li>Information Systems</li>
+            </ul>
+            <div class="uniCard-action-btn">
+              <a href="lincon_learn.html">Learn More</a>
+              <div class="webpage">
+                <i class="bx bx-globe"></i>
+                <a href="www.con">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/AI_pro_logo.jpg" alt="Njala University logo">
+          </div>
+          <div class="uni-card-text">
+            <h2>AI-Pro</h2>
+            <p><strong>Location:</strong> Freetown</p>
+            <p><strong>Type:</strong> Private</p>
+            <ul>
+              <p><strong>Tech Courses:</strong></p>
+              <li>Software Engineering</li>
+              <li>Computer Science</li>
+              <li>Information Systems</li>
+            </ul>
+            <div class="uniCard-action-btn">
+              <a href="lincon_learn.html">Learn More</a>
+              <div class="webpage">
+                <i class="bx bx-globe"></i>
+                <a href="www.con">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- More university cards here... -->
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/test_img.jpg" alt="">
+          </div>
+          <div class="uni-card-text">
+            <h2>Institute of Public Administration and Management (IPAM) - (USL)</h2>
+            <p><strong>Location:</strong> Freetown</p>
+            <p><strong>Type:</strong> Private</p>
+            <ul>
+              <p><strong>Tech Courses:</strong>
+                <li>Software Engineering</li>
+                <li>Computer Science</li>
+                <li>Information Systems</li>
+            </ul>
+            <div class="uniCard-action-btn">
+              <a href="lincon_learn.html">Learn More</a>
+              <div class="webpage">
+                <i class="bx bx-globe"></i>
+                <a href="www.con">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/test_img.jpg" alt="">
+          </div>
+          <div class="uni-card-text">
+            <h2>University of Makeni (UniMak)</h2>
+            <p><strong>Location:</strong> Makeni</p>
+            <p><strong>Type:</strong> Public</p>
+            <ul>
+              <p><strong>Tech Courses:</strong>
+                <li>Software Engineering</li>
+                <li>Computer Science</li>
+                <li>Information Systems</li>
+            </ul>
+            <div class="uniCard-action-btn">
+              <a href="Unimak.html">Learn More</a>
+              <div class="webpage">
+                <i class="bx bx-globe"></i>
+                <a href="www.con">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/ebk.png" alt="">
+          </div>
+          <div class="uni-card-text">
+            <h2>Earnest Bai Koroma (EBK)</h2>
+            <p><strong>Location:</strong> Makeni</p>
+            <p><strong>Type:</strong> Public</p>
+            <ul>
+              <p><strong>Tech Courses:</strong>
+                <li>Software Engineering</li>
+                <li>Computer Science</li>
+                <li>Information Systems</li>
+            </ul>
+            <div class="uniCard-action-btn">
+              <a href="Unimak.html">Learn More</a>
+              <div class="webpage">
+                <i class="bx bx-globe"></i>
+                <a href="www.con">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/blucrest_logo.jpg" alt="">
+          </div>
+          <div class="uni-card-text">
+            <h2>BlueCrest College Sierra Leone</h2>
+            <p><strong>Location:</strong> Freetown</p>
+            <p><strong>Type:</strong> Private</p>
+            <ul>
+              <p><strong>Tech Courses:</strong>
+                <li>Software Engineering</li>
+                <li>Information Systems</li>
+                <li>Web Development</li>
+                <li>Information Technology</li>
+                <li>Cybersecurity</li>
+                <li>Mobile App Development</li>
+                <li>Cloud Computing</li>
+            </ul>
+            <div class="uniCard-action-btn">
+              <a href="BueCrest.html">Learn More</a>
+              <div class="webpage">
+                <i class="bx bx-globe"></i>
+                <a href="www.con">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/test_img.jpg" alt="">
+          </div>
+          <div class="uni-card-text">
+            <h2>University of Sierra Leone</h2>
+            <p><strong>Location:</strong> Freetown</p>
+            <p><strong>Type:</strong> Government</p>
+            <ul>
+              <p><strong>Tech Courses:</strong>
+                <li>Software Engineering</li>
+                <li>Data Science</li>
+                <li>Information Technology</li>
+            </ul>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+
+        <div class="university-card">
+          <div class="university-logo">
+            <img src="assets/universities/test_img.jpg" alt="">
+          </div>
+          <div class="uni-card-text">
+            <h2>University of Sierra Leone</h2>
+            <p><strong>Location:</strong> Bo</p>
+            <p><strong>Type:</strong> Private</p>
+            <ul>
+              <p><strong>Tech Courses:</strong>
+                <li>BIT</li>
+                <li>Data Science</li>
+                <li>Information Technology</li>
+            </ul>
+            <a href="BueCrest.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="courses">
+      <div class="search-bar">
+        <input type="search" id="searchInput" placeholder="Search for courses..." onkeyup="filterCourses()">
+      </div>
+
+      <div class="course-section" id="courseList">
+        <div class="course-card">
+          <div class="course-ing-card">
+            <div id="slideshow-container">
+              <!-- Slides -->
+              <div class="mySlides">
+                <img src="assets/universities/SE.jpg" alt="">
+              </div>
+              <div class="mySlides">
+                <img src="assets/universities/IS.jpg" alt="">
+              </div>
+              <div class="mySlides">
+                <img src="assets/universities/Date_analysis.jpg" alt="">
+              </div>
+            </div>
+
+            <!-- <img src="assets/universities/SE.jpg" alt=""> -->
+          </div>
+          <div class="course-text-content">
+            <h2>Software Engineering</h2>
+            <p>Learn how to develop software solutions, work with different programming languages, and manage software
+              projects.
+              This course covers key principles of software development methodologies, including Agile and DevOps.
+              You'll
+              gain
+              hands-on experience in coding, debugging, and testing applications while understanding the software
+              development
+              lifecycle. Skills acquired in this course will prepare you for roles such as software developer, system
+              analyst,
+              or project manager in tech companies.</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/Date_analysis.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Data Science</h2>
+            <p>Study data analytics, machine learning, and statistical methods to derive insights from data. This course
+              focuses
+              on using programming languages like <a href="#">Python</a> and <a href="#">R</a> to manipulate data,
+              create visualizations, and build
+              predictive
+              models. You will also learn about databases and data wrangling techniques. Data science skills are in high
+              demand,
+              with career opportunities as data analyst, data scientist, or machine learning engineer in various
+              industries.</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/IS.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Information Systems</h2>
+            <p>Focus on the management of information systems to support business processes and decision-making. This
+              course
+              covers the design, implementation, and evaluation of information systems in organizations. You will learn
+              about
+              databases, system analysis, and project management, as well as how to align technology with business
+              strategies.
+              Graduates can pursue careers as systems analyst, IT manager, or business analyst in diverse sectors.</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/Web.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Web Development</h2>
+            <p>Learn to build dynamic and responsive websites using HTML, CSS, JavaScript, and various frameworks. This
+              course
+              includes both front-end and back-end development, teaching you how to create user-friendly interfaces and
+              manage
+              server-side functionality. You'll also explore best practices in web design and user experience. Career
+              paths
+              include web developer, front-end developer, or full-stack developer in tech firms or freelance roles.</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/mobile.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Mobile App Development</h2>
+            <p>Discover how to create applications for mobile devices using platforms like Android and iOS. This course
+              covers
+              programming languages such as Java, Kotlin, and Swift, and includes best practices for mobile UI/UX
+              design.
+              You
+              will learn about APIs, databases, and app publishing processes. Graduates can work as mobile app
+              developers,
+              UX/UI
+              designers, or product managers in the growing mobile industry.</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/Cyber_security.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Cybersecurity</h2>
+            <p>Learn about protecting systems, networks, and data from cyber threats. This course covers various topics,
+              including encryption, ethical hacking, risk management, and compliance with legal standards. You'll gain
+              hands-on
+              experience with security tools and techniques used in the industry. Career opportunities include
+              cybersecurity
+              analyst, information security officer, and penetration tester, all essential roles in safeguarding digital
+              assets.
+            </p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/AI.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Artificial Intelligence</h2>
+            <p>Explore the principles of AI, including machine learning, natural language processing, and robotics. This
+              course
+              will teach you how to develop algorithms that enable machines to learn from data and make decisions. You
+              will work
+              on real-world projects, applying AI techniques to solve complex problems. Career opportunities in this
+              field
+              include AI researcher, machine learning engineer, and data scientist, as AI continues to transform
+              industries.</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/cloud.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Cloud Computing</h2>
+            <p>Understand the fundamentals of cloud technologies and how they are applied in business environments. This
+              course
+              covers cloud service models (IaaS, PaaS, SaaS), deployment models, and security practices in cloud
+              computing. You
+              will learn to use platforms like AWS, Microsoft Azure, and Google Cloud. Graduates can pursue careers as
+              cloud
+              engineers, cloud architects, or system administrators, as cloud technology continues to dominate IT
+              infrastructure.</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/SE.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Game Development</h2>
+            <p>Learn how to design and develop video games using programming languages and game engines such as Unity or
+              Unreal
+              Engine. This course includes concepts like game physics, storytelling, character design, and level design.
+              You’ll
+              gain experience in coding, graphics, and sound integration to create immersive gaming experiences. Career
+              options
+              include game designer, developer, and project manager in the gaming industry.</p>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-ing-card">
+            <img src="assets/universities/Robotics.jpg" alt="">
+          </div>
+          <div class="course-text-content">
+
+            <h2>Robotics</h2>
+            <p>Explore the design, construction, and programming of robots. This course covers fundamental concepts in
+              mechanics, electronics, and control systems, along with practical applications of robotics in various
+              fields. You
+              will learn to program robots using languages like Python and C++, and work on projects involving sensors
+              and
+              actuators. Career paths include robotics engineer, automation specialist, or research scientist in
+              robotics
+              applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ Footer ============================ -->
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <span class="logo_name">Tech Inspire SL</span>
+        </div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/profile.php?id=100070279923303"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/techinspiresl?igsh=YmFvaDByejJ3NmNy"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/tech-inspire-sl/?viewAsMember=true"><i
+              class="bx bxl-linkedin"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <img src="assets/images/TI_logo.webp" width="180" alt="" />
+          <p style="color: white">
+            Inspiring the Next Generation of Tech Innovators
+          </p>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Tech Inspire SL</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About us</a></li>
+          <li><a href="index.html#about">UniGuide</a></li>
+          <li><a href="index.html#about">FAQs</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">How to reach us</li>
+          <li>
+            <p><i class="bx bx-map"></i> Lungi/Freetown</p>
+          </li>
+          <li>
+            <p><i class="bx bx-phone"></i> +232 74522500</p>
+            <p><i class="bx bx-phone"></i> +232 74522500</p>
+          </li>
+          <li>
+            <p><i class="bx bxl-gmail"></i> techinspiresl16@gmail.com</p>
+          </li>
+        </ul>
+        <!-- <ul class="box">
+            <li class="link_name">Courses</li>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Photography</a></li>
+            <li><a href="#">Photoshop</a></li>
+          </ul> -->
+        <!-- <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email" /></li>
+            <li><input type="button" value="Subscribe" /></li>
+          </ul> -->
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2024 <a href="#">TechInspire.SL.</a>All rights
+          reserved</span>
+        <span class="policy_terms">
+          <a href="#">Support Us</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for handling Filtering in university section -->
+  <script>
+    // JavaScript for Filtering
+    const locationFilter = document.getElementById('location-filter');
+    const courseFilter = document.getElementById('course-filter');
+    const typeFilter = document.getElementById('type-filter');
+    const searchInput = document.getElementById('search-input');
+    const universityCards = document.querySelectorAll('.university-card');
+
+    // Attach event listeners
+    locationFilter.addEventListener('change', filterUniversities);
+    courseFilter.addEventListener('change', filterUniversities);
+    typeFilter.addEventListener('change', filterUniversities);
+    searchInput.addEventListener('input', filterUniversities); // Add search event listener
+
+    function filterUniversities() {
+      const locationValue = locationFilter.value.toLowerCase();
+      const courseValue = courseFilter.value.toLowerCase();
+      const typeValue = typeFilter.value.toLowerCase();
+      const searchValue = searchInput.value.toLowerCase(); // Get the search input value
+
+      universityCards.forEach(card => {
+        const location = card.querySelector('p:nth-of-type(1)').textContent.toLowerCase();
+        const type = card.querySelector('p:nth-of-type(2)').textContent.toLowerCase();
+        const courses = Array.from(card.querySelectorAll('li')).map(li => li.textContent.toLowerCase()).join(', ');
+        const universityName = card.querySelector('h2').textContent.toLowerCase(); // Get university name
+
+        // Check if university matches the filters
+        const matchesLocation = !locationValue || location.includes(locationValue);
+        const matchesCourse = !courseValue || courses.includes(courseValue);
+        const matchesType = !typeValue || type.includes(typeValue);
+        const matchesSearch = !searchValue || universityName.includes(searchValue) || courses.includes(searchValue); // Check search input
+
+        if (matchesLocation && matchesCourse && matchesType && matchesSearch) {
+          card.style.display = 'block'; // Show matching card
+        } else {
+          card.style.display = 'none'; // Hide non-matching card
+        }
+      });
+    }
+  </script>
+
+  <!-- JavaScript to handle switch button - course/universities -->
+  <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const universityContent = document.getElementById('content');
+    const coursesContent = document.getElementById('courses');
+
+    let isUniversity = true;
+
+    toggleButton.addEventListener('click', () => {
+      isUniversity = !isUniversity;
+
+      if (isUniversity) {
+        toggleButton.textContent = "Show Courses";
+        universityContent.classList.add('active');
+        coursesContent.classList.remove('active');
+
+        // Show filter section when switch to course section
+        locationFilter.style.display = 'block'
+        courseFilter.style.display = 'block'
+        typeFilter.style.display = 'block'
+        searchInput.style.display = 'block'
+      } else {
+        toggleButton.textContent = "Show University";
+        universityContent.classList.remove('active');
+        coursesContent.classList.add('active');
+
+        // Hide filter section when switch to course section
+        locationFilter.style.display = 'none'
+        courseFilter.style.display = 'none'
+        typeFilter.style.display = 'none'
+        searchInput.style.display = 'none'
+      }
+    });
+  </script>
+
+
+  <!-- JavaScript to handle search course in course section -->
+  <script>
+    function filterCourses() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const courseList = document.getElementById('courseList');
+      const courses = courseList.getElementsByClassName('course-card');
+
+      Array.from(courses).forEach(course => {
+        const title = course.getElementsByTagName('h2')[0].textContent.toLowerCase();
+        const description = course.getElementsByTagName('p')[0].textContent.toLowerCase();
+
+        if (title.includes(searchInput) || description.includes(searchInput)) {
+          course.style.display = 'block'; // Show the course
+        } else {
+          course.style.display = 'none'; // Hide the course
+        }
+      });
+    }
+  </script>
+
+  <!-- JavaScript to handle the image slide show in course section -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change slide every 2 seconds
+    }
+  </script>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>

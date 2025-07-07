@@ -69,9 +69,15 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">About Us</a></li>
-          <li><a href="index.html">Our Team</a></li>
+          <div class="dropdown">
+            <li><a href="index.html" class="dropdown active">Home</a></li>
+            <div class="dropdown-content">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#archievements">Achievements</a></li>
+              <li><a href="#team">Our Team</a></li>
+            </div>
+          </div>
+          <li><a href="universities.html">UniGuide</a></li>
           <li><a href="events.html" class="active">Events</a></li>
           <li><a href="faq.html">FAQs</a></li>
           <!-- <li><a href="news.html">News</a></li> -->
@@ -103,6 +109,18 @@
       </div>
       <div class="event-list">
         <!-- New Event: Teaching Computer Hardware -->
+        <div class="event">
+          <h3>Teaching Artificial Intelligence</h3>
+          <p>Learn the fundamentals of computer hardware in this hands-on session. We'll cover components like CPUs,
+            GPUs, and
+            how they all work together!</p>
+          <p><i class="bx bx-calendar"></i> Pending...</p>
+          <p><i class="bx bx-time"></i> Pending...</p>
+          <p><i class="bx bx-map"></i> Pending...</p>
+          <button id="attend" class="attending-btn">Attending</button>
+          <button id="not-attend" class="attending-btn">Not Attending</button>
+        </div>
+        
         <div class="event">
           <h3>Teaching Computer Hardware</h3>
           <p>Learn the fundamentals of computer hardware in this hands-on session. We'll cover components like CPUs,
@@ -180,13 +198,6 @@
             <p><i class="bx bxl-gmail"></i> techinspiresl16@gmail.com</p>
           </li>
         </ul>
-        <!-- <ul class="box">
-          <li class="link_name">Courses</li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Photoshop</a></li>
-        </ul> -->
         <ul class="box input-box">
           <li class="link_name">Subscribe</li>
           <li><input type="text" placeholder="Enter your email"></li>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Between University and Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .university,
+        .courses {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="toggleButton">Show Courses</button>
+        <div id="content" class="university active">
+            <h1>University Information</h1>
+            <p>Details about the university...</p>
+        </div>
+        <div id="courses" class="courses">
+            <h1>Course List</h1>
+            <p>Details about courses...</p>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const universityContent = document.getElementById('content');
+        const coursesContent = document.getElementById('courses');
+
+        let isUniversity = true;
+
+        toggleButton.addEventListener('click', () => {
+            isUniversity = !isUniversity;
+
+            if (isUniversity) {
+                toggleButton.textContent = "Show Courses";
+                universityContent.classList.add('active');
+                coursesContent.classList.remove('active');
+            } else {
+                toggleButton.textContent = "Show University";
+                universityContent.classList.remove('active');
+                coursesContent.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Central University - Details</title>
+  <meta name="description"
+    content="Explore Central University, a private university offering top tech programs such as Software Engineering and Graphic Design in Mile 91.">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/uni_courses.css">
+
+  <!-- Box icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <style>
+    /* Main Content Styles */
+    .container {
+      max-width: 1200px;
+      /* margin: 40px auto; */
+      padding: 20px;
+      background-color: var(--extra-bg);
+      /* background-color: black; */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .heading h1 {
+      font-size: 36px;
+      color: #004080;
+    }
+
+    .heading p {
+      font-size: 18px;
+      color: red;
+      margin-top: 10px;
+    }
+
+    /* University details section */
+    .university-details {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .university-logo img {
+      width: 200px;
+      border-radius: 8px;
+    }
+
+    .university-info h2 {
+      color: var(--border-color);
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .university-info h3 {
+      color: var(--secondary-text-color);
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .university-info p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: var(--secondary-text-color);
+      /* color: whitesmoke; */
+    }
+
+    .university-info ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .university-info ul li {
+      margin-bottom: 8px;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      background-color: #004080;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .apply-btn:hover {
+      background-color: #0066cc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-container">
+      <div class="logo">
+        <img class="logo-img" src="./assets/images/TI_logo.webp"
+          alt="Tech Inspire SL logo - Technology Education in Sierra Leone" />
+        <h1 id="logo-text">Tech Inspire SL</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="universities.html">UniGuide</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <!-- <li><a href="news.html">News</a></li> -->
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-btn">
+        <button id="theme-toggle"></button>
+        <button class="hamburger">
+          <i class="bx bx-menu"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="heading">
+      <h1>Central University</h1>
+      <p>Your gateway to excellence in tech and creative education.</p>
+    </div>
+
+    <!-- University Details -->
+    <section class="university-details">
+      <div class="university-logo">
+        <img src="assets/universities/linkon.jpg" alt="Central University Logo" />
+      </div>
+
+      <div class="university-info">
+        <h2>About Central University</h2>
+        <p>Central University is a private institution located in Freetown, Sierra Leone.
+          The university specializes in providing top-tier education in the field of technology and creative arts. Our
+          programs are designed to equip students with the skills they need to succeed in today's digital age.</p>
+
+        <h3>Location</h3>
+        <p><strong>City:</strong> Freetown</p>
+        <p><strong>Type:</strong> Private University</p>
+
+        <h3>Available Tech Courses</h3>
+        <ul>
+          <li>Cyber Security</li>
+          <li>Computer Science</li>
+          <li>Information Systems</li>
+          <li>Business Information Technology</li>
+        </ul>
+
+        <h3>Facilities & Features</h3>
+        <ul>
+          <li>Modern computer labs with the latest software</li>
+          <li>Creative studios for graphic design and animation</li>
+          <li>Experienced faculty with industry expertise</li>
+          <li>On-campus accommodation and library</li>
+        </ul>
+
+        <h3>Why Choose Central University?</h3>
+        <p>Central University offers a unique blend of tech and creative education, helping students to combine their
+          passion for technology with creative solutions. Our focus on hands-on learning, innovation, and industry
+          partnerships ensures that our graduates are ready to tackle real-world challenges in tech and design.</p>
+
+        <h3>Contact Information</h3>
+        <p><strong>Email:</strong> admissions@linkonkinguniversity.sl</p>
+        <p><strong>Phone:</strong> +232-XX-XXXX-XXX</p>
+        <p><strong>Website:</strong> <a href="https://www.linkonkinguniversity.sl"
+            target="_blank">www.linkonkinguniversity.sl</a></p>
+
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Tech Inspire SL. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
